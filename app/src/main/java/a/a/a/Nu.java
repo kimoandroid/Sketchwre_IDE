@@ -173,8 +173,6 @@ public class Nu extends LinearLayout implements Uu, OnClickListener {
                 setAdUnit(1);
                 break;
 
-            case R.id.tv_reward_edit:
-                setAdUnit(2);
         }
     }
 
