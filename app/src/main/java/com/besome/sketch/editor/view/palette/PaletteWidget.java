@@ -22,6 +22,7 @@ import dev.aldi.sayuti.editor.view.palette.IconCollapsingToolbar;
 import dev.aldi.sayuti.editor.view.palette.IconGoogleSignInButton;
 import dev.aldi.sayuti.editor.view.palette.IconLottieAnimation;
 import dev.aldi.sayuti.editor.view.palette.IconMaterialButton;
+import dev.aldi.sayuti.editor.view.palette.IconNumberPicker;
 import dev.aldi.sayuti.editor.view.palette.IconOTPView;
 import dev.aldi.sayuti.editor.view.palette.IconPatternLockView;
 import dev.aldi.sayuti.editor.view.palette.IconRadioGroup;
@@ -281,7 +282,9 @@ public class PaletteWidget extends LinearLayout {
             case "MaterialButton":
                 iconBase = new IconMaterialButton(context);
                 break;
-
+            case "NumberPicker":
+                iconBase = new IconNumberPicker(context);
+                break;
             case "CircleImageView":
                 iconBase = new IconCircleImageView(context);
                 break;

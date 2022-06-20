@@ -13,6 +13,7 @@ import dev.aldi.sayuti.editor.view.item.ItemCodeView;
 import dev.aldi.sayuti.editor.view.item.ItemGoogleSignInButton;
 import dev.aldi.sayuti.editor.view.item.ItemLottieAnimation;
 import dev.aldi.sayuti.editor.view.item.ItemMaterialButton;
+import dev.aldi.sayuti.editor.view.item.ItemNumberPicker;
 import dev.aldi.sayuti.editor.view.item.ItemOTPView;
 import dev.aldi.sayuti.editor.view.item.ItemPatternLockView;
 import dev.aldi.sayuti.editor.view.item.ItemRecyclerView;
@@ -92,6 +93,8 @@ public class ViewPanes {
                 return new ItemCodeView(context);
             case 48:
                 return new ItemRecyclerView(context);
+            case 49:
+                return new ItemNumberPicker( context );
             default:
                 return null;
         }
