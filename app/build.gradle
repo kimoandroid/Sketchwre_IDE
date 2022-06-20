@@ -63,6 +63,9 @@ android {
             keyPassword "testkey"
         }
     }
+    androidResources {
+        additionalParameters "--stable-ids", "public-stable-ids.txt"
+    }
 }
 
 dependencies {
@@ -96,7 +99,7 @@ dependencies {
     implementation "com.squareup.okio:okio:1.14.0"
     coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:1.1.5"
     implementation "com.guardsquare:proguard-base:7.1.1"
-    
-    
-    
+
+
+
 }

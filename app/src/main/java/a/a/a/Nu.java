@@ -162,13 +162,17 @@ public class Nu extends LinearLayout implements Uu, OnClickListener {
 
     @Override
     public void onClick(View var1) {
-        int i = var1.getId();
-        if (i == 2131231179 || i == 2131231886) {
-            setAdUnit(0);
-        } else if (i == 2131231180 || i == 2131232011) {
-            setAdUnit(1);
-        } else if (i == R.id.tv_reward_edit) {
-            setAdUnit(2);
+        switch (var1.getId()) {
+            case 2131231179:
+            case 2131231886:
+                setAdUnit(0);
+                break;
+
+            case 2131231180:
+            case 2131232011:
+                setAdUnit(1);
+                break;
+
         }
     }
 
