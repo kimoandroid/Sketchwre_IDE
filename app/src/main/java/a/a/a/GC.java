@@ -340,22 +340,7 @@ public class GC extends DA implements View.OnClickListener {
 
         public ProjectsAdapter(RecyclerView recyclerView) {
             layoutPosition = -1;
-            if (recyclerView.getLayoutManager() instanceof LinearLayoutManager) {
-                recyclerView.a(new RecyclerView.m() {
-                    public void a(RecyclerView recyclerView1, int var2, int var3) {
-                        super.a(recyclerView1, var2, var3);
-                        if (var3 > 4) {
-                            if (isCollapsed) return;
-                            collapseAnimatorSet.start();
-                            isCollapsed = true;
-                        } else {
-                            if (var3 >= -4 || !isCollapsed) return;
-                            expandAnimatorSet.start();
-                            isCollapsed = false;
-                        }
-                    }
-                });
-            }
+            recyclerView.getLayoutManager();
         }
 
         @Override
@@ -416,10 +401,15 @@ public class GC extends DA implements View.OnClickListener {
             viewHolder.tvPublished.setText(yB.c(projectMap, "sc_id"));
             viewHolder.b.setTag("custom");
 
-            setCornerRadius(viewHolder.appIconLayout, 100, 0xFFF5F5F5);
+
 
             viewHolder.appIconLayout.setElevation((float) 25);
-            setCornerRadius(viewHolder.linear1Projectsitem, 100, Color.TRANSPARENT);
+            viewHolder.appIconLayout.setBackground( new GradientDrawable(){
+                public GradientDrawable getIns(int ol,int bol){
+                    this.setCornerRadius( ol );
+                    this.setColor( bol );
+                    return this;
+                }}.getIns( 20,Color.parseColor( "#f5f5f5" ) ));
 
             viewHolder.appName.setSingleLine(true);
             viewHolder.appName.setEllipsize(TextUtils.TruncateAt.MARQUEE);
@@ -558,16 +548,6 @@ public class GC extends DA implements View.OnClickListener {
                 gB.b(projectOptionLayout, 300, null);
             }
         }
-        
-        public void setCornerRadius(View v, int g, int e) {
-            v.setBackground(new GradientDrawable() {
-                public GradientDrawable getIns(int a, int b) {
-                    this.setCornerRadius(a);
-                    this.setColor(b);
 
-                    return this;
-                }
-            }.getIns(g, e));
-        }
     }
 }
