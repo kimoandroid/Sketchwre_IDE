@@ -444,7 +444,7 @@ public class GC extends DA implements View.OnClickListener {
             public LinearLayout linear1Projectsitem;
             public LinearLayout projectOption;
             public LinearLayout projectOne;
-            public LinearLayout appIconLayout;
+            public View appIconLayout;
             public CircleImageView imgIcon;
             public TextView projectName;
             public TextView appName;
