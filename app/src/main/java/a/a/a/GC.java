@@ -419,7 +419,7 @@ public class GC extends DA implements View.OnClickListener {
             setCornerRadius(viewHolder.appIconLayout, 100, 0xFFF5F5F5);
 
             viewHolder.appIconLayout.setElevation((float) 25);
-            setCornerRadius(viewHolder.linear1Projectsitem, 100, Color.TRANSPORT);
+            setCornerRadius(viewHolder.linear1Projectsitem, 100, Color.TRANSPARENT);
 
             viewHolder.appName.setSingleLine(true);
             viewHolder.appName.setEllipsize(TextUtils.TruncateAt.MARQUEE);
