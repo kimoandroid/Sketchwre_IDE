@@ -7,9 +7,12 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Build.VERSION;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -380,7 +383,7 @@ public class GC extends DA implements View.OnClickListener {
                 viewHolder.projectButtonLayout.a();
             }
 
-            viewHolder.imgIcon.setImageResource(R.drawable.default_icon);
+            viewHolder.imgIcon.setImageResource(R.drawable.project_icon);
             if (yB.c(projectMap, "sc_ver_code").isEmpty()) {
                 projectMap.put("sc_ver_code", "1");
                 projectMap.put("sc_ver_name", "1.0");
@@ -405,14 +408,41 @@ public class GC extends DA implements View.OnClickListener {
                 viewHolder.imgIcon.setImageURI(uri);
             }
 
-            viewHolder.appName.setText(yB.c(projectMap, "my_ws_name"));
+            String version = yB.c(projectMap, "sc_ver_name") + "(" + yB.c(projectMap, "sc_ver_code") + ")";
+            viewHolder.appName.setText(yB.c(projectMap, "my_ws_name") + " " + version);
             viewHolder.projectName.setText(yB.c(projectMap, "my_app_name"));
             viewHolder.packageName.setText(yB.c(projectMap, "my_sc_pkg_name"));
-            String version = yB.c(projectMap, "sc_ver_name") + "(" + yB.c(projectMap, "sc_ver_code") + ")";
-            viewHolder.projectVersion.setText(version);
             viewHolder.tvPublished.setVisibility(View.VISIBLE);
             viewHolder.tvPublished.setText(yB.c(projectMap, "sc_id"));
             viewHolder.b.setTag("custom");
+
+            viewHolder.appIconLayout.setBackground(new GradientDrawable() {
+                public GradientDrawable getIns(int a, int b) {
+                    this.setCornerRadius(a);
+                    this.setColor(b);
+
+                    return this;
+                }
+            }.getIns(100, 0xFFF5F5F5));
+
+            viewHolder.appIconLayout.setElevation((float) 25);
+            viewHolder.linear1Projectsitem.setBackground(new GradientDrawable() {
+                public GradientDrawable getIns(int a, int b) {
+                    this.setCornerRadius(a);
+                    this.setColor(b);
+
+                    return this;
+                }
+            }.getIns(100, Color.TRANSPARENT));
+
+            viewHolder.appName.setSingleLine(true);
+            viewHolder.appName.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+
+            viewHolder.projectName.setSingleLine(true);
+            viewHolder.projectName.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+
+            viewHolder.packageName.setSingleLine(true);
+            viewHolder.packageName.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         }
 
         public ViewHolder b(ViewGroup parent, int viewType) {
@@ -425,24 +455,24 @@ public class GC extends DA implements View.OnClickListener {
             public ImageView expand;
             public MyProjectButtonLayout projectButtonLayout;
             public LinearLayout projectOptionLayout;
+            public LinearLayout linear1Projectsitem;
             public LinearLayout projectOption;
             public LinearLayout projectOne;
-            public View appIconLayout;
+            public LinearLayout appIconLayout;
             public CircleImageView imgIcon;
             public TextView projectName;
             public TextView appName;
             public TextView packageName;
-            public TextView projectVersion;
 
             public ViewHolder(View itemView) {
                 super(itemView);
                 projectOne = itemView.findViewById(R.id.project_one);
                 projectName = itemView.findViewById(R.id.project_name);
                 appIconLayout = itemView.findViewById(R.id.app_icon_layout);
+                linear1Projectsitem = itemView.findViewById(R.id.linear1_projectsitem);
                 imgIcon = itemView.findViewById(R.id.img_icon);
                 appName = itemView.findViewById(R.id.app_name);
                 packageName = itemView.findViewById(R.id.package_name);
-                projectVersion = itemView.findViewById(R.id.project_version);
                 tvPublished = itemView.findViewById(R.id.tv_published);
                 expand = itemView.findViewById(R.id.expand);
                 projectOptionLayout = itemView.findViewById(R.id.project_option_layout);

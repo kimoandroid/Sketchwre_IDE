@@ -2015,6 +2015,7 @@ public final class R {
         public static int prototype_48 = 0x7f070354;
         public static int pull_down_48 = 0x7f070355;
         public static int push_in_50 = 0x7f070356;
+        public static int project_icon = 0x7f0704c8;
         public static int qa_a = 0x7f070357;
         public static int qa_q = 0x7f070358;
         public static int read_boy = 0x7f070359;
@@ -2710,6 +2711,7 @@ public final class R {
         public static int exitUntilCollapsed = 0x7f08014a;
         public static int expand = 0x7f08014b;
         public static int expand_activities_button = 0x7f08014c;
+        public static int exit_linear = 0x7f080709;
         public static int expanded_menu = 0x7f08014d;
         public static int fab = 0x7f08014e;
         public static int fab_toggle_palette = 0x7f08014f;
@@ -3130,6 +3132,7 @@ public final class R {
         public static int list_tickets = 0x7f0802ed;
         public static int list_tutorial = 0x7f0802ee;
         public static int list_xml = 0x7f0802ef;
+        public static int linear1_projectsitem = 0x7f080713;
         public static int ll_choose_project = 0x7f0802f0;
         public static int ll_goto_console = 0x7f0802f1;
         public static int ll_grade = 0x7f0802f2;
