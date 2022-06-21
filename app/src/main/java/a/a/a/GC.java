@@ -416,24 +416,10 @@ public class GC extends DA implements View.OnClickListener {
             viewHolder.tvPublished.setText(yB.c(projectMap, "sc_id"));
             viewHolder.b.setTag("custom");
 
-            viewHolder.appIconLayout.setBackground(new GradientDrawable() {
-                public GradientDrawable getIns(int a, int b) {
-                    this.setCornerRadius(a);
-                    this.setColor(b);
-
-                    return this;
-                }
-            }.getIns(100, 0xFFF5F5F5));
+            setCornerRadius(viewHolder.appIconLayout, 100, 0xFFF5F5F5);
 
             viewHolder.appIconLayout.setElevation((float) 25);
-            viewHolder.linear1Projectsitem.setBackground(new GradientDrawable() {
-                public GradientDrawable getIns(int a, int b) {
-                    this.setCornerRadius(a);
-                    this.setColor(b);
-
-                    return this;
-                }
-            }.getIns(100, Color.TRANSPARENT));
+            setCornerRadius(viewHolder.linear1Projectsitem, 100, Color.TRANSPORT);
 
             viewHolder.appName.setSingleLine(true);
             viewHolder.appName.setEllipsize(TextUtils.TruncateAt.MARQUEE);
@@ -571,6 +557,17 @@ public class GC extends DA implements View.OnClickListener {
                 gB.a(expand, -180.0F, null);
                 gB.b(projectOptionLayout, 300, null);
             }
+        }
+        
+        public void setCornerRadius(View v, int g, int e) {
+            v.setBackground(new GradientDrawable() {
+                public GradientDrawable getIns(int a, int b) {
+                    this.setCornerRadius(a);
+                    this.setColor(b);
+
+                    return this;
+                }
+            }.getIns(g, e));
         }
     }
 }
