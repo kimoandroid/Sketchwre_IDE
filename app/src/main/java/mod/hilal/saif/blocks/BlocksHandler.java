@@ -24,7 +24,14 @@ public class BlocksHandler {
         hashMap.put("palette", "0");
         hashMap.put("spec", "Java Command Block: reference %s distance %d frontend %d backend %d command %m.Command");
         arrayList.add(hashMap);
-
+        hashMap.put("name", "CommandBlockJava");
+        hashMap.put("type", "c");
+        hashMap.put("typeName", "");
+        hashMap.put("code", "/*-JX4UA2y_f1OckjjvxWI.bQwRei-sLEsBmds7ArsRfi0xSFEP3Php97kjdMCs5ed\n>[%1$s]\n>%2$s\n>%3$s\n>%4$s\n>%5$s\n%6$s\nBpWI8U4flOpx8Ke66QTlZYBA_NEusQ7BN-D0wvZs7ArsRfi0.EP3Php97kjdMCs*/");
+        hashMap.put("color", "#493F5A");
+        hashMap.put("palette", "0");
+        hashMap.put("spec", "Java Command Block: reference %s distance %d frontend %d backend %d command %m.Command");
+        arrayList.add(hashMap);
         hashMap = new HashMap<>();
         hashMap.put("name", "CommandBlockXML");
         hashMap.put("type", "c");
@@ -1090,6 +1097,17 @@ public class BlocksHandler {
         hashMap.put("palette", "-1");
         hashMap.put("spec", "%m.textview setTextSize %d");
         arrayList.add(hashMap);
+
+
+        hashMap = new HashMap<>();
+        hashMap.put("name", "setTextSize");
+        hashMap.put("type", " ");
+        hashMap.put("code", "%s.setTextSize((int)%s);");
+        hashMap.put("color", "#4A6CD4");
+        hashMap.put("palette", "-1");
+        hashMap.put("spec", "%m.textview setTextSize %d");
+        arrayList.add(hashMap);
+
 
         hashMap = new HashMap<>();
         hashMap.put("name", "setColorFilterView");

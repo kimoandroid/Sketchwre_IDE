@@ -115,7 +115,8 @@ public class ExtraBlockClassInfo {
 
             case "youtubeview":
                 return "YoutubePlayer";
-
+            case "numberpicker":
+                return "numberpicker";
             case "cardview":
                 return "CardView";
 

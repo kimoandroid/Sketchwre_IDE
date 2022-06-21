@@ -80,7 +80,9 @@ public class ConstVarComponent {
             case "LottieAnimationView":
                 isLottieUsed = true;
                 break;
-
+            case "NumberPicker":
+                isLottieUsed = true;
+                break;
             case "OTPView":
                 isOTPViewUsed = true;
                 break;

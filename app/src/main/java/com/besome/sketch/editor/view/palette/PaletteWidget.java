@@ -109,7 +109,9 @@ public class PaletteWidget extends LinearLayout {
             case c:
                 iconBase = new IconEditText(getContext());
                 break;
-
+            case je:
+                iconBase = new IconNumberPicker(getContext());
+                break;
             case b:
                 iconBase = new IconTextView(getContext());
                 break;
@@ -409,6 +411,7 @@ public class PaletteWidget extends LinearLayout {
         l, //eAddView
         m, //eProgressBar
         n, //eMapView
-        o //eRadioButton
+        o,
+        je//eRadioButton
     }
 }
