@@ -35,6 +35,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.besome.sketch.beans.ProjectFileBean;
+import com.besome.sketch.common.ImageColorPickerActivity;
 import com.besome.sketch.common.SrcViewerActivity;
 import com.besome.sketch.editor.manage.ManageCollectionActivity;
 import com.besome.sketch.editor.manage.font.ManageFontActivity;
@@ -109,6 +110,7 @@ public class DesignActivity extends BaseAppCompatActivity implements OnClickList
 
     private static final int REQUEST_CODE_VIEW_MANAGER = 208;
     private static final int REQUEST_CODE_IMAGE_MANAGER = 209;
+    private static final int REQUEST_CODE_IMAGE_PICKER_MANAGER = 2010;
     private static final int REQUEST_CODE_SOUND_MANAGER = 217;
     private static final int REQUEST_CODE_LIBRARY_MANAGER = 226;
     private static final int REQUEST_CODE_FONT_MANAGER = 228;
@@ -832,6 +834,11 @@ public class DesignActivity extends BaseAppCompatActivity implements OnClickList
     void toImageManager() {
         launchActivity(ManageImageActivity.class, REQUEST_CODE_IMAGE_MANAGER);
     }
+
+    void toColorPickerManager() {
+        launchActivity( ImageColorPickerActivity.class, REQUEST_CODE_IMAGE_MANAGER);
+    }
+
 
     /**
      * Opens {@link ManageLibraryActivity}.

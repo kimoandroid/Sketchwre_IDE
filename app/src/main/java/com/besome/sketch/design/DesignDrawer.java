@@ -62,6 +62,7 @@ public class DesignDrawer extends LinearLayout implements View.OnClickListener {
         menusLayout.addView(addDrawerItem(5, false,
                 R.drawable.ic_picture_48dp, R.string.design_drawer_menu_title_image, R.string.design_drawer_menu_description_image
         ));
+
         /* Add Sound Manager */
         menusLayout.addView(addDrawerItem(6, false,
                 R.drawable.ic_sound_wave_48dp, R.string.design_drawer_menu_title_sound, R.string.design_drawer_menu_description_sound
@@ -118,6 +119,9 @@ public class DesignDrawer extends LinearLayout implements View.OnClickListener {
         /* Add Logcat Reader */
         menusLayout.addView(addDrawerItem(22,false,
                 R.drawable.icons8_app_components,R.string.design_drawer_menu_title_logcat_reader,R.string.design_drawer_menu_subtitle_logcat_reader));
+        menusLayout.addView(addDrawerItem(23, false,
+                                          R.drawable.color_package_96, R.string.design_drawer_menu_title_image, R.string.design_drawer_menu_description_image
+        ));
     }
 
     @Override
@@ -200,6 +204,9 @@ public class DesignDrawer extends LinearLayout implements View.OnClickListener {
 
                     case 22:
                         designActivity.toLogReader();
+                        return;
+                    case 23:
+                        designActivity.toColorPickerManager();
                         return;
                     case 2:
                     default:

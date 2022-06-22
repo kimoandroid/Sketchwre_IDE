@@ -4684,6 +4684,7 @@
     <public type="layout" name="about_empty_viewpager" id="0x7f0b01f6" />
     <public type="layout" name="about_moddersview" id="0x7f0b01f7" />
     <public type="layout" name="text_compose_popup_window" id="0x7f0b01f8" />
+    <public type="layout" name="image_color_picker_manager_activity" id="0x7f0c01b1" />
     <public type="menu" name="contents_search_menu" id="0x7f0c0000" />
     <public type="menu" name="design_logic_menu" id="0x7f0c0001" />
     <public type="menu" name="design_menu" id="0x7f0c0002" />

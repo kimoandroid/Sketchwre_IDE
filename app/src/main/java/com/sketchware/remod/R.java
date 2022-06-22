@@ -2377,6 +2377,9 @@ public final class R {
     }
 
     public static final class id {
+        public static int picker_table =0x7f090772;
+        public static int picker_colored =0x7f090773;
+        public static int hex_color =0x7f090774;
         public static int ALT = 0x7f080000;
         public static int CTRL = 0x7f080001;
         public static int FUNCTION = 0x7f080002;
@@ -3319,6 +3322,7 @@ public final class R {
         public static int rb_matchparent = 0x7f0803a7;
         public static int rb_only_config = 0x7f0803a8;
         public static int rb_string = 0x7f0803a9;
+
         public static int rb_wrapcontent = 0x7f0803aa;
         public static int rd_privacy_onlyme = 0x7f0803ab;
         public static int rd_privacy_public = 0x7f0803ac;
@@ -4312,6 +4316,7 @@ public final class R {
     }
 
     public static final class layout {
+        public static int image_color_picker_manager_activity = 0x7f0c01b1;
         public static int abc_action_bar_title_item = 0x7f0b0000;
         public static int abc_action_bar_up_container = 0x7f0b0001;
         public static int abc_action_menu_item_layout = 0x7f0b0002;
