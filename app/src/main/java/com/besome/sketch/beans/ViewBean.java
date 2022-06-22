@@ -210,7 +210,8 @@ public class ViewBean extends nA implements Parcelable {
         switch (typeName) {
             case "Switch":
                 return VIEW_TYPE_WIDGET_SWITCH;
-
+            case "NumberPicker":
+                return VIEW_TYPE_WIDGET_SWITCH;
             case "MapView":
                 return VIEW_TYPE_WIDGET_MAPVIEW;
 

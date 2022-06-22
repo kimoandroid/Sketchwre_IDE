@@ -3287,6 +3287,7 @@ com.sketchware.remod:id/rb_map = 0x7f0803a6
 com.sketchware.remod:id/rb_matchparent = 0x7f0803a7
 com.sketchware.remod:id/rb_only_config = 0x7f0803a8
 com.sketchware.remod:id/rb_string = 0x7f0803a9
+
 com.sketchware.remod:id/rb_wrapcontent = 0x7f0803aa
 com.sketchware.remod:id/rd_privacy_onlyme = 0x7f0803ab
 com.sketchware.remod:id/rd_privacy_public = 0x7f0803ac

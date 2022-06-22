@@ -1771,4 +1771,8 @@
     <item type="id" name="tcpw_material_button_paste" />
     <item type="id" name="tcpw_material_button_select_all" />
     <item type="id" name="text_compose_panel" />
+    <item name="picker_table" type="id"/>
+    <item name="picker_colored" type="id"/>
+    <item name="hex_color" type="id"/>
+    <item name="linear1_projectsitem" type="id"/>
 </resources>
