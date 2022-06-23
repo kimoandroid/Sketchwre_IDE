@@ -409,6 +409,13 @@ public class GC extends DA implements View.OnClickListener {
                     this.setCornerRadius( ol );
                     this.setColor( bol );
                     return this;
+                }}.getIns( 100,Color.parseColor( "#f5f5f5" ) ));
+
+            viewHolder.projectOne.setBackground( new GradientDrawable(){
+                public GradientDrawable getIns(int ol,int bol){
+                    this.setCornerRadius( ol );
+                    this.setColor( bol );
+                    return this;
                 }}.getIns( 20,Color.parseColor( "#f5f5f5" ) ));
 
             viewHolder.appName.setSingleLine(true);

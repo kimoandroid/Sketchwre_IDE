@@ -3,6 +3,8 @@ package com.besome.sketch;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +27,7 @@ import mod.abdo.exitapp.ExitApplication;
 import mod.hilal.saif.activities.tools.Tools;
 import mod.ilyasse.activities.about.AboutModActivity;
 
-public class MainDrawer extends LinearLayout implements View.OnClickListener {
+public class MainDrawer extends LinearLayout {
 
     private Context context;
 
@@ -42,25 +44,24 @@ public class MainDrawer extends LinearLayout implements View.OnClickListener {
     private void initialize(Context context) {
         this.context = context;
         wB.a(context, this, R.layout.main_drawer);
-        LinearLayout exit_linear = findViewById(R.id.exit_linear);
         RecyclerView recyclerView = findViewById(R.id.menu_list);
+        Shape(findViewById(R.id.layout_main), 10.0, 10.0, 10.0, 10.0, "#FFFFFF");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setItemAnimator(new ci());
         DrawerItemAdapter drawerItemAdapter = new DrawerItemAdapter();
         recyclerView.setAdapter(drawerItemAdapter);
         initializeDrawerItems();
-        exit_linear.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
-        if (!mB.a()) {
-            int id = v.getId();
-            if (id == R.id.exit_linear) {
-                ExitApplication.exitApplication(context);
-            }
-        }
+    private void Shape(View v, Double top1, Double top2, Double bottom1, Double bottom2, String insideColor) {
+        GradientDrawable s = new GradientDrawable();
+        s.setShape(GradientDrawable.RECTANGLE);
+        s.setCornerRadii(new float[] {
+                top1.floatValue(), top1.floatValue(), top2.floatValue(), top2.floatValue(), bottom2.floatValue(), bottom2.floatValue(), bottom1.floatValue(), bottom1.floatValue()
+        });
+        s.setColor(Color.parseColor(insideColor));
+        v.setBackground(s);
     }
 
     /**

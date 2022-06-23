@@ -47,7 +47,6 @@
             android:src="@drawable/plus_96"
             app:backgroundTint="#ffffffff"
             android:tint="#0078fe"
-
             app:elevation="6.0dip"
             app:fabSize="auto"
             app:layout_anchorGravity="center" />

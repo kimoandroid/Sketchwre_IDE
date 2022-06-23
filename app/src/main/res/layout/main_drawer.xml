@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@id/layout_main"
-    android:layout_width="260dp"
+    android:layout_width="250dp"
     android:layout_height="match_parent"
-    android:background="@color/color_primary"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="#FFFFFF"
     android:orientation="vertical">
 
     <ScrollView
@@ -24,35 +27,6 @@
                 android:scrollbars="vertical"
                 android:splitMotionEvents="false" />
 
-            <LinearLayout
-                android:id="@+id/exit_linear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:background="#42A5F5"
-                android:gravity="bottom|left"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_weight="1"
-                    android:padding="3dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/exit" />
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:text="Exit"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14dp" />
-
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
