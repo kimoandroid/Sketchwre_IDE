@@ -239,6 +239,7 @@ public class Ox {
                     case 22:
                     case 23:
                     case 24:
+                    case 49:
                     case 32:
                         if (!hasAttr("focusable", viewBean))
                             widgetTag.a("android", "focusable", "false");

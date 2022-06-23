@@ -57,6 +57,7 @@ public class ViewBean extends nA implements Parcelable {
     public static final int VIEW_TYPE_WIDGET_ADVIEW = 17;
     public static final int VIEW_TYPE_WIDGET_MAPVIEW = 18;
     public static final int VIEW_TYPE_COUNT = 19;
+    public static final int VIEW_TYPE_NUMBERPICKER = 49;
 
     @Expose
     public String adSize;
@@ -210,8 +211,7 @@ public class ViewBean extends nA implements Parcelable {
         switch (typeName) {
             case "Switch":
                 return VIEW_TYPE_WIDGET_SWITCH;
-            case "NumberPicker":
-                return VIEW_TYPE_WIDGET_SWITCH;
+
             case "MapView":
                 return VIEW_TYPE_WIDGET_MAPVIEW;
 
@@ -235,6 +235,8 @@ public class ViewBean extends nA implements Parcelable {
 
             case "ImageView":
                 return VIEW_TYPE_WIDGET_IMAGEVIEW;
+            case "NumberPicker":
+                return VIEW_TYPE_NUMBERPICKER;
 
             case "LinearLayout":
                 return VIEW_TYPE_LAYOUT_LINEAR;
@@ -284,6 +286,8 @@ public class ViewBean extends nA implements Parcelable {
 
             case VIEW_TYPE_WIDGET_IMAGEVIEW:
                 return "ImageView";
+            case VIEW_TYPE_NUMBERPICKER:
+                return "NumberPicker";
 
             case VIEW_TYPE_WIDGET_WEBVIEW:
                 return "WebView";
@@ -344,6 +348,9 @@ public class ViewBean extends nA implements Parcelable {
                 return 0x7f070422;
 
             case VIEW_TYPE_WIDGET_IMAGEVIEW:
+                return 0x7f07042d;
+
+            case VIEW_TYPE_NUMBERPICKER:
                 return 0x7f07042d;
 
             case VIEW_TYPE_WIDGET_WEBVIEW:
@@ -418,6 +425,10 @@ public class ViewBean extends nA implements Parcelable {
 
             case VIEW_TYPE_WIDGET_IMAGEVIEW:
                 name = "ImageView";
+                break;
+
+            case VIEW_TYPE_NUMBERPICKER:
+                name = "NumberPicker";
                 break;
 
             case VIEW_TYPE_WIDGET_WEBVIEW:

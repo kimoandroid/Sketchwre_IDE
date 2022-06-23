@@ -295,6 +295,8 @@ public class mq {
 
             case "edittext":
                 return "EditText";
+            case "numberpicker":
+                return "EditText";
 
             case "imageview":
                 return "ImageView";
@@ -489,6 +491,9 @@ public class mq {
                 importList.add("android.widget.EditText");
                 return importList;
 
+            case "NumberPicker":
+                importList.add("android.widget.NumberPicker");
+                return importList;
             case "CompoundButton":
                 importList.add("android.widget.CompoundButton");
                 return importList;

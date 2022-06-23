@@ -129,6 +129,10 @@ public class Gx {
                 classInfos = "View.FrameLayout.CalendarView";
                 break;
 
+            case "NumberPicker":
+                classInfos = "View.NumberPicker";
+                break;
+
             case "AdView":
                 classInfos = "View.AdView";
                 break;
