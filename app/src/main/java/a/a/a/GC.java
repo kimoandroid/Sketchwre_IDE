@@ -34,7 +34,6 @@ import com.besome.sketch.lib.ui.CircleImageView;
 import com.besome.sketch.projects.MyProjectButton;
 import com.besome.sketch.projects.MyProjectButtonLayout;
 import com.besome.sketch.projects.MyProjectSettingActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.sketchware.remod.R;
 
 import java.io.File;
@@ -65,7 +64,7 @@ public class GC extends DA implements View.OnClickListener {
     public ValueAnimator collapseValueAnimator;
     public ValueAnimator expandValueAnimator;
     public ProjectsAdapter projectsAdapter;
-    public FloatingActionButton floatingActionButton;
+    public CardView floatingActionButton;
 
     private void toProjectSettingOrRequestPermission(int position) {
         if (super.c()) {
@@ -234,10 +233,10 @@ public class GC extends DA implements View.OnClickListener {
     public void showCreateNewProjectLayout() {
         if (projectsList.size() > 0) {
             cvCreateNew.setVisibility(View.GONE);
-            floatingActionButton.f();
+            floatingActionButton.setVisibility(View.VISIBLE);
         } else {
             cvCreateNew.setVisibility(View.VISIBLE);
-            floatingActionButton.c();
+            floatingActionButton.setVisibility(View.GONE);
         }
     }
 

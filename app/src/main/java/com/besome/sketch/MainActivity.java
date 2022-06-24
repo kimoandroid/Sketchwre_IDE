@@ -12,18 +12,19 @@ import android.os.Environment;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.besome.sketch.lib.base.BasePermissionAppCompatActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.sketchware.remod.R;
 
@@ -55,7 +56,7 @@ import mod.tyron.backup.SingleCopyAsyncTask;
 
 public class MainActivity extends BasePermissionAppCompatActivity implements ViewPager.e {
 
-    private FloatingActionButton fab;
+    private CardView fab;
     private DrawerLayout drawerLayout;
     private l drawerToggle;
     private MainDrawer drawer;
@@ -383,7 +384,7 @@ public class MainActivity extends BasePermissionAppCompatActivity implements Vie
             }
             projectsFragment.showCreateNewProjectLayout();
         } else if (position == 1) {
-            fab.c();
+            fab.setVisibility(View.GONE);
         }
     }
 
